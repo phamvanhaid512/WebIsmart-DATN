@@ -17,7 +17,32 @@
                         </li>
                     @endforeach
                     <li>
-                    <a href="{{ route('user.signIn') }}"title="">Đăng nhập</a>
+                    @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                 document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+
+                    <!-- <a href="{{ route('user.signIn') }}"title="">Đăng nhập</a> -->
                     </li>
                 </ul>
             </div>
@@ -25,7 +50,8 @@
     </div>
     <div id="head-body" class="clearfix">
         <div class="wp-inner">
-            <a href="{{ route('user.index') }}" title="" id="logo" class="fl-left"><img
+            <a href="{{ route('user.index') }}"  title="" id="logo" class="fl-left"><img class="logo" style="    height: 50px;
+    width: 179px;"
                     src="{{ asset('public/users/images/logo.png') }}" /></a>
             <div id="search-wp" class="fl-left">
                 <form action="{{ route('user.search') }}" autocomplete="off">

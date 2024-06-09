@@ -8,7 +8,7 @@
 @endsection
 @section('main_class', 'blog-page')
 @section('content')
-<div class="secion" id="breadcrumb-wp">
+<div class="secion" id="brmeadcrumb-wp">
     <div class="secion-detail">
         <ul class="list-item clearfix">
             <li>

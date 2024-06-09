@@ -211,9 +211,11 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'UserHomeController@index')->name('user.index');
 
-    Route::get('/dangki', 'UserInfomationController@signUp')->name('user.signUp');
+    Route::get('/dangki', 'UserHomeController@signUp')->name('user.signUp');
+    Route::post('/dangki', 'UserHomeController@postSignUp')->name('user.postSignUp');
 
-    Route::get('/dangnhap', 'UserInfomationController@signIn')->name('user.signIn');
+    Route::get('/dangnhap', 'UserHomeController@signIn')->name('user.signIn');
+    Route::post('/dangnhap', 'UserHomeController@postSignIn')->name('user.postSignIn');
 
     Route::get('tim-kiem', 'UserProductController@search')->name('user.search');
 

@@ -7,7 +7,6 @@ function recursive($data, $parent_id = 0, $level = 0) {
             $item['level'] = $level;
             $result[] = $item;
 
-            unset($data[$item[$parent_id]]);
             $child = recursive($data, $item['id'], $level + 1);
             $result = array_merge($result, $child);
         }
@@ -16,11 +15,12 @@ function recursive($data, $parent_id = 0, $level = 0) {
 }
 
 function dataSelect($model) {
-    $dataModels = $model::all();
+    $dataModels = $model::all()->toArray(); // Convert collection to array
     $dataModels = recursive($dataModels);
 
+    $data_select = [];
     foreach ($dataModels as $data) {
-        $data_select[$data->id] = str_repeat('|---', $data->level) . $data->name;
+        $data_select[$data['id']] = str_repeat('|---', $data['level']) . $data['name'];
     }
 
     return $data_select;

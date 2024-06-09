@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+            <h2 id="titlee" style="font-weight: 600;text-align: center;font-size: 30px; ">Đăng nhập</h2>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -47,6 +47,9 @@
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
+                                    <a class="signUp" href="{{ route('user.signUp') }}" style="    margin-left: 162px;
+    color: black;
+    padding: 20px 0px;">Đăng kí</a>
                                 </div>
                             </div>
                         </div>
@@ -62,6 +65,7 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+          
                             </div>
                         </div>
                     </form>
