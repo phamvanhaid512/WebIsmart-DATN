@@ -1,3 +1,10 @@
+<style>
+   img.banner {
+    width: 333px ;
+    height: 427px;
+}
+</style>
+
 <div class="sidebar fl-left">
     {{-- categoryProduct --}}
     @include('user.components.categoryProduct')
@@ -33,7 +40,7 @@
     <div class="section" id="banner-wp">
         <div class="section-detail">
             <a href="{{ route('user.index') }}" title="" class="thumb">
-                <img src="{{ asset('public/users/images/banner.png') }}" alt="">
+                <img  class="banner" src="{{ asset('public/users/images/banner.jpg') }}" alt="">
             </a>
         </div>
     </div>

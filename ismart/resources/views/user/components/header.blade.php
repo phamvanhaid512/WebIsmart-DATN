@@ -1,3 +1,12 @@
+<style>
+    a.dropdown-item:hover {
+        background: red !important;
+    }
+    a.dropdown-item {
+        background:red !important;
+
+    }
+</style>
 <div id="header-wp">
     <div id="head-top" class="clearfix">
         <div class="wp-inner">

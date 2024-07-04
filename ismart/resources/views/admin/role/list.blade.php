@@ -4,7 +4,7 @@
     <div id="content" class="container-fluid">
         <div class="card">
             <div class="card-header font-weight-bold d-flex justify-content-between align-items-center">
-                <h5 class="m-0 ">Danh sách sản phẩm</h5>
+                <h5 class="m-0 ">Danh sách vai trò</h5>
                 <div class="form-search form-inline">
                     <form action="">
                         <input type="text" class="form-control form-search" name="kw" placeholder="Tìm kiếm tên vai trò"

@@ -140,7 +140,7 @@
                     </ul>
                 </div> --}}
                 <div class="place-order-wp clearfix">
-                <a type="button" id="order-now" name="btn-checkout" style="
+                <!-- <a type="button" id="order-now" name="btn-checkout" style="
     float: right;
     display: inline-block;
     padding: 10px 40px;
@@ -152,8 +152,8 @@
     outline: none;
     background: #3f5da6;
     color: #fff;background: #3f5da6;" 
-    href="{{ route('user.complete') }}">Đặt hàng</a>
-                    <!-- <input type="button" id="order-now" name="btn-checkout" value="Đặt hàng"> -->
+    href="{{ route('user.complete') }}">Đặt hàng</a> -->
+                    <input type="button" id="order-now" name="btn-checkout" value="Đặt hàng">
                 </div>
             </div>
         </div>

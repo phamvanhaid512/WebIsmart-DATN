@@ -80,7 +80,7 @@
         {{-- Điện thoại --}}
         <div class="section" id="list-product-wp">
             <div class="section-head">
-                <a href="{{ route('user.category', ['slugCategory' => 'ca-phe']) }}" class="section-title">Cà phê</a>
+                <a href="{{ route('user.category', ['slugCategory' => 'nong-san']) }}" class="section-title">Nông sản</a>
             </div>
             <div class="section-detail">
                 <ul class="list-item clearfix">
@@ -111,7 +111,7 @@
         {{-- Laptop --}}
         <div class="section" id="list-product-wp">
             <div class="section-head">
-                <a href="{{ route('user.category', ['slugCategory' => 'tra-sua']) }}" class="section-title">Trà Sữa</a>
+                <a href="{{ route('user.category', ['slugCategory' => 'hoa-cat-canh']) }}" class="section-title">Hoa cắt cành</a>
             </div>
             <div class="section-detail">
                 <ul class="list-item clearfix">

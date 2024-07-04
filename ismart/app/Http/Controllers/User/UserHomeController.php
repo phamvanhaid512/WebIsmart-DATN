@@ -29,7 +29,7 @@ class UserHomeController extends Controller
 
         //Product Ịphone
         $catChildIphone = CategoryProduct::where('parent_id', function ($query) {
-            $query->select('id')->from('category_products')->where('slug', '=', 'ca-phe');
+            $query->select('id')->from('category_products')->where('slug', '=', 'nong-san');
         })->get();
         foreach ($catChildIphone as $item) {
             $catIphoneIds[] = $item->id;
@@ -38,7 +38,7 @@ class UserHomeController extends Controller
 
         //Product laptop
         $catChildLaptop = CategoryProduct::where('parent_id', function ($query) {
-            $query->select('id')->from('category_products')->where('slug', '=', 'tra-sua');
+            $query->select('id')->from('category_products')->where('slug', '=', 'hoa-cat-canh');
         })->get();
         foreach ($catChildLaptop as $item) {
             $catLaptopIds[] = $item->id;
@@ -97,13 +97,13 @@ class UserHomeController extends Controller
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            // 'password' => Hash::make($request->password),
-            'password' => $request->password,
+            'password' => Hash::make($request->password),
+            // 'password' => $request->password,
 
         ]);
     
         // Redirect to home with success message
-        return redirect('dangnhap')->with('status', 'Bạn đã đăng kí thành công');
+        return redirect('login')->with('status', 'Bạn đã đăng kí thành công');
     }
     
 
