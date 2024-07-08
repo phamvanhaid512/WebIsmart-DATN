@@ -83,8 +83,15 @@
                                     <div class="clearfix">
                                         <div class="fl-right">
                                             <a href="{{ route('user.checkout') }}" title="" id="checkout-cart">Thanh
-                                                toán</a>
+                                                toán trực tiếp</a>
+                                                <br> <p class="or">Hoặc</p>
+                                            <form   action="{{ route('user.vnpay_payment') }}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="total" value="{{ Cart::total() }}">
+                                                <button type="submit" name="redirect" class="vnpay" style="with:100%">Thanh toán bằng VNPay</button>
+                                            </form>
                                         </div>
+                                        
                                     </div>
                                 </td>
                             </tr>
@@ -108,7 +115,7 @@
                 <img src="{{ asset('public/users/images/cart-empty.png') }}" alt="">
                 <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
                 <a href="{{ route('user.index') }}" class="btn btn-outline-success" title="trang chủ">Quay trở về Trang
-                    chủ Ismart Store</a>
+                    chủ GreenFarm Store</a>
             </div>
         @endif
     </div>

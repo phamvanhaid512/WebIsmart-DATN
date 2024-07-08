@@ -28,8 +28,8 @@ class OrderConfirmation extends Mailable {
      */
     public function build() {
         return $this->view('user.mail.orderConfirmation')
-            ->from('phananhtai868@gmail.com', 'ISMART STORE')
-            ->subject('Xác nhận đơn hàng cửa hàng ISMART STORE')
+            ->from('phananhtai868@gmail.com', 'GREENFARM STORE')
+            ->subject('Xác nhận đơn hàng cửa hàng GREENFARM STORE')
             ->with($this->data);
     }
 }

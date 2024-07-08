@@ -5,7 +5,14 @@ a {
 a:hover {
     text-decoration: none;
 }
-
+span.bestSeller {
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 0px 20px;
+    position: absolute;
+    right: 0px;
+}
 .topnav .navbar-brand {
     width: 15rem;
     padding-left: 1rem;

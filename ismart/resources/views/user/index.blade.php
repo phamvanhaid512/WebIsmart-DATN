@@ -1,5 +1,5 @@
 @extends('layouts.user')
-@section('title', 'Ismart Store')
+@section('title', 'GreenFarm Store')
 @section('main_class', 'home-page')
 @section('content')
     <div class="main-content fl-right">

@@ -55,11 +55,30 @@
     overflow: hidden;
     border: 1px solid #ccc;
 }
+.or {
+    font-weight: 700;
+    font-size: 20px;
+    padding: 22px 20px 15px 20px;
+}
+
+.vnpay {
+    display: inline-block;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-size: 11px;
+    border-radius: 3px;
+    font-family: "Roboto Bold";
+    font-weight: normal;
+    border: none;
+    outline: none;
+    background: #f12a43;
+    color: #fff;
+}
 #checkout-cart {
     display: inline-block;
     padding: 12px 25px;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 11px;
     border-radius: 3px;
     font-family: "Roboto Bold";
     font-weight: normal;

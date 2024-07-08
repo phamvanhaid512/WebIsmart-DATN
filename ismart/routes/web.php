@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -208,6 +209,8 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
     });
 });
 
+//Thanh toán vnPay
+// Route::post('vnpay_payment',[PaymentController::class,'vnpay_payment']);
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'UserHomeController@index')->name('user.index');
 
@@ -224,6 +227,9 @@ Route::group(['namespace' => 'User'], function () {
 
     Route::get('thanh-toan', 'UserCartController@checkout')->name('user.checkout');
     Route::post('thanh-toan', 'UserCartController@postCheckout')->name('user.postCheckout');
+    Route::post('vnpay_payment', 'UserCartController@vnpay_payment')->name('user.vnpay_payment');
+
+
 
     Route::get('page/{id}', 'UserHomeController@page')->name('user.page');
 

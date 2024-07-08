@@ -1,7 +1,7 @@
 <div id="wrap-inner" style="font-family:Arial;background-color: #ececec;padding: 15px 0px; font-size: 14px;">
     <div class="content-confirmation"
         style="padding: 15px; max-width: 600px; background-color: white; margin: 0px auto;">
-        <h3 style="margin-top: 0px;">Cảm ơn quý khách Phan Anh Tài đã đặt hàng tại Ismart Store</h3>
+        <h3 style="margin-top: 0px;">Cảm ơn quý khách Phan Anh Tài đã đặt hàng tại GreenFarm Store</h3>
         <div id="customer">
             <h3 style="color:#f12a43; border-bottom: 1px solid #333">Thông tin khách hàng</h3>
             <p>
